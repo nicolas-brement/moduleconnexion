@@ -1,0 +1,32 @@
+*{
+    font-family: Avenir, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    text-align: justify;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(image/ghibli2.jpeg) fixed no-repeat;
+    background-size: cover;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    margin-right: 500px;
+    margin-left: 500px;
+    font-size: medium;
+    border-radius: 15px;
+}
+
+.inscription h2 {
+    color: darkgoldenrod;
+    font-size: 0,5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
