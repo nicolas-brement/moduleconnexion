@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "root";
+$password_serveur = "root";
 $dbname = "moduleconnexion";
 $bdd = mysqli_connect('localhost', 'root', 'root', 'moduleconnexion');
 // connexion à la base de donnée
@@ -46,7 +46,7 @@ $bdd = mysqli_connect('localhost', 'root', 'root', 'moduleconnexion');
         <br>
         <input type="text" name="login">
         <br>
-        <label for="password" class="form-label">Password:</label>
+        <label for="password" name="password" class="form-label">Password:</label>
         <br>
         <input type="password" name="password">
         <br><br>

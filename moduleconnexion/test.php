@@ -153,3 +153,77 @@ $connexion = mysqli_connect($servername, $username, $password, $dbname);
 </form>
 </body>
 </html>
+
+<-------------------------------------------------------------------->
+
+if(isset($_POST['envoi'])){
+    $new_login = htmlspecialchars($_POST['new_login']);
+    $login = htmlspecialchars($_SESSION['login']);
+    $query ="UPDATE `utilisateurs` SET login='$new_login' WHERE login= '$login'";
+    $sql = $bdd->query($query);
+    $result = $sql->fetch_assoc(); // return in array
+        echo $result;
+        if ($new_login == $result['new_login']){
+            echo "Votre login a bien été mis à jour.";
+        }
+    
+
+        if(isset($_POST['envoi']))
+        $new_password = htmlspecialchars($_POST['new_password']);
+        $password = htmlspecialchars($_SESSION['password']);
+        $query2 ="UPDATE `utilisateurs` SET password='$new_password' WHERE password= '$password'";
+        $sql2 = $bdd->query($query2);
+        $result2 = $sql2->fetch_assoc(); // return in array
+            echo $result2;
+        if ($new_password == $result2['new_password']) {
+            echo "Votre password a bien été mis à jour.";
+      }
+    }
+?>
+
+<----------------------------------------------------------------------------------->
+
+if(isset($_POST['envoi'])){
+
+$new_login = htmlspecialchars($_POST['new_login']);
+$login = htmlspecialchars($_SESSION['login']);
+$new_password = htmlspecialchars($_POST['new_password']);
+$password = htmlspecialchars($_SESSION['password']);
+
+
+$query ="UPDATE `utilisateurs` SET login='$new_login' WHERE login= '$login'";
+$sql = $bdd->query($query);
+$result = $sql->fetch_assoc(); // return in array
+    var_dump($result) ;
+
+    if ($new_login == $result['new_login']){
+        echo "Votre login a bien été mis à jour.";
+    }
+
+
+    
+    $query2 ="UPDATE `utilisateurs` SET password='$new_password' WHERE password= '$password'";
+    $sql2 = $bdd->query($query2);
+    $result2 = $sql2->fetch_assoc(); // return in array
+        echo $result2;
+    if ($new_password == $result2['new_password']) {
+        echo "Votre password a bien été mis à jour.";
+  }
+}
+
+
+
+<----------------------------------------------------------------------------------->
+
+if (isset($_POST['submit'])) {
+    if ($nom != $_POST['new_login']) {
+        $sql1 ="UPDATE `utilisateurs` SET login='{$_POST['new_login']}' WHERE login='$login'";
+        $result1 = $conn->query($sql1);
+        echo "Votre login a bien été changé par:" . $_POST['new_login'] . "<br>";
+
+    }if ($nom != $_POST['new_password']) {
+        $sql2 ="UPDATE `utilisateurs` SET password='{$_POST['new_password']}' WHERE password='$password'";
+        $result2 = $conn->query($sql2);
+        echo "Votre nom a bien été changé par:" . $_POST['new_password'] . "<br>";
+    }
+}
