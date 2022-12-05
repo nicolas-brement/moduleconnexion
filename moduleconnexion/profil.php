@@ -18,21 +18,21 @@ if(!empty($_SESSION)) {
     $prenom = $result['prenom'];
     $password = $result['password'];
 
-    if (isset($_POST['submit'])) { // if user send form
-        if ($nom != $_POST['nom']) { // if name bdd is different to post name sended so update it
+    if (isset($_POST['submit'])) { 
+        if ($nom != $_POST['nom']) { 
             $sql1 = "UPDATE `utilisateurs` SET nom='{$_POST['nom']}' WHERE nom='$nom'";
             $result1 = $bdd->query($sql1);
             echo "Votre nom a bien été changé par:" . $_POST['nom'] ."<br>";
 
-        }if ($prenom != $_POST['prenom']) { // same for prenom
+        }if ($prenom != $_POST['prenom']) {
             $sql2 = "UPDATE `utilisateurs` SET prenom='{$_POST['prenom']}' WHERE prenom='$prenom'";
             $result2 = $bdd->query($sql2);
             echo "Votre nom a bien été changé par:" . $_POST['prenom'] . "<br>";
-        }if ($login != $_POST['login']) { // same for login
+        }if ($login != $_POST['login']) {
             $sql3 = "UPDATE `utilisateurs` SET login='{$_POST['login']}' WHERE login='$login'";
             $result3 = $bdd->query($sql3);
             echo "Votre login a bien été changé par:" . $_POST['login'] . "<br>";
-        }if ($password != $_POST['password']) { // same for login and don't forget to hash it
+        }if ($password != $_POST['password']) {
             $new_password = password_hash($_POST['password'], PASSWORD_DEFAULT);
             $sql4 = "UPDATE `utilisateurs` SET password='$new_password' WHERE password='$password'";
             $result4 = $bdd->query($sql4);
@@ -42,7 +42,7 @@ if(!empty($_SESSION)) {
     }
 
 }
-if (isset($_POST['delete'])) { // if user push delete button so delete all data from bdd and destroy session then redirect.
+if (isset($_POST['delete'])) {
     $sql_delete = "DELETE FROM utilisateurs WHERE login='$login'";
     $result_delete = $bdd->query($sql_delete);
     echo "Vos données ont été supprimées";
