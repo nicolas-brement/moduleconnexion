@@ -1,0 +1,151 @@
+*{
+    font-family: Avenir, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    text-align: justify;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(image/ghibli4.png) fixed no-repeat;
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 100%;
+    margin-bottom: 10px;
+    background: rgb(76,73,212);
+    background: linear-gradient(90deg, rgba(76,73,212,0.6881346288515406) 18%, rgba(213,186,107,0.7105435924369747) 52%, rgba(76,73,212,1) 80%);
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 365px;
+    height: 40px;
+    width: 100%;
+    background: rgb(76,73,212);
+    background: linear-gradient(90deg, rgba(76,73,212,0.6881346288515406) 18%, rgba(213,186,107,0.7105435924369747) 52%, rgba(76,73,212,1) 80%);
+}
+
+.formulaire {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#texte_profil {
+    color: white;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 116px;
+    border-radius: 8px;
+    width: 200px;
+}
+
+table, thead, tbody, th, td, tr {
+    display: block;
+    margin-top: 5px;
+    overflow: auto;
+
+}
+thead {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+tr { border: 1px solid #ccc; }
+
+td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+}
+
+input {
+    max-width: 100%;
+}
+
+td:before {
+
+    position: absolute;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-family: 'Karla', sans-serif;
+}
+td:nth-of-type(1):before { content: "Nom"; }
+td:nth-of-type(2):before { content: "Prenom"; }
+td:nth-of-type(3):before { content: "Login"; }
+td:nth-of-type(4):before { content: "Mot de passe"; }
+
+tbody tr {
+    background-color: rgba(213,186,107,0.7105435924369747);
+    border-radius: 10px;
+}
+
+tbody td {
+    border: none;
+}
+
+#tableau {
+    flex-direction: column;
+ 
+    width: 30%;
+    border-radius: 10px;
+}
+
+.btn {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+
+}
+
+.arrow {
+    display: flex;
+    align-items: center ;
+    background: black;
+    height: 0.1em;
+    width: 1.5em;
+    margin-right: 1em;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.arrow::before,
+.arrow::after {
+    position: absolute;
+    content: "";
+    background: black;
+    height: 0.1em;
+    width: 0.6em;
+    right: 0;
+    top: 0;
+}
+.arrow::before {
+    transform: rotate(45deg);
+    transform-origin: right bottom;
+}
+.arrow::after {
+    transform: rotate(-45deg);
+    transform-origin: right top;
+}
+.btn:hover .arrow {
+    width: 5em;
+}

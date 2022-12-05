@@ -8,16 +8,24 @@
 
 header{
     display: flex;
-    height: 75px;
+    height: 50px;
     width: 100%;
     margin-bottom: 10px;
-    background: rgb(255,255,255);
-    background: linear-gradient(90deg, rgba(255,255,255,0.6265099789915967) 0%, rgba(128,75,36,0.6181066176470589) 35%, rgba(0,212,255,0.8842130602240896) 100%);
+    background: rgb(110,190,251);
+    background: linear-gradient(90deg, rgba(110,190,251,0.39401698179271705) 18%, rgba(255,255,255,0.40242034313725494) 50%, rgba(213,186,107,0.3379945728291317) 88%);
+}
+
+footer {
+    display: flex;
+    margin-top: 44%;
+    height: 50px;
+    width: 100%;
+    background: rgb(110,190,251);
+    background: linear-gradient(90deg, rgba(110,190,251,0.39401698179271705) 18%, rgba(255,255,255,0.40242034313725494) 50%, rgba(213,186,107,0.3379945728291317) 88%);
 }
 
 body {
     width: 100%;
-    padding: 20px 0px;
     background: url("image/ghibli5.jpeg") fixed no-repeat;
     background-size: cover;
 }
@@ -70,4 +78,9 @@ h3 {
     flex-direction: column;
     align-items: center;
     justify-content: end;
+}
+
+#github {
+    width: 45px;
+    margin-left: 1550%;
 }

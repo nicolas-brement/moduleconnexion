@@ -6,30 +6,8 @@
     box-sizing: border-box;
 }
 
-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-    width: 100%;
-    margin-bottom: 10px;
-    background: rgb(255,255,255);
-    background: linear-gradient(90deg, rgba(255,255,255,0.6265099789915967) 0%, rgba(250,172,217,0.40242034313725494) 40%, rgba(242,163,255,0.3379945728291317) 64%, rgba(251,110,194,0.39401698179271705) 67%);
-}
-
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20%;
-    height: 40px;
-    width: 100%;
-    background: rgb(255,255,255);
-    background: linear-gradient(90deg, rgba(255,255,255,0.6265099789915967) 0%, rgba(250,172,217,0.40242034313725494) 40%, rgba(242,163,255,0.3379945728291317) 64%, rgba(251,110,194,0.39401698179271705) 67%);
-}
-
 body {
-    background: url(image/ghibli2.jpeg) fixed no-repeat;
+    background: url(image/ghibli6.png) fixed no-repeat;
     background-size: cover;
 }
 
@@ -44,13 +22,41 @@ form {
     border-radius: 15px;
 }
 
-.inscription h2 {
-    color: darkgoldenrod;
-    text-shadow: 2px 2px 8px black;
-    font-size: 0,5em;
+header{
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: center;
+    height: 40px;
+    width: 100%;
+    margin-bottom: 10px;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,0.6265099789915967) 0%, rgba(128,75,36,0.6181066176470589) 35%, rgba(0,212,255,0.8842130602240896) 100%);
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 100%;
+   margin-top: 450px;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,0.6265099789915967) 0%, rgba(128,75,36,0.6181066176470589) 35%, rgba(0,212,255,0.8842130602240896) 100%);
+}
+
+
+.connexion {
+        color: #0dcae2;
+        font-size: 0,5em;
+        text-shadow: 2px 2px 8px black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+}
+
+form {
+    margin-top: 40px;
 }
 
 .btn {

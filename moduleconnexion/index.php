@@ -13,11 +13,6 @@
             
             //On établit la connexion
             $connexion = mysqli_connect($servername, $username, $password, $dbname);// connexion à la base de donnée
-            
-            //On vérifie la connexion
-            if($conn->connect_error){
-                die('Erreur : ' .$conn->connect_error);
-            }
         ?>
     <header>
         <?php require "header.php"; ?>
@@ -26,7 +21,8 @@
     <body>
         <div class="background_index">
         </div>
-
     </body>
+    <footer><a href="https://github.com/nicolas-brement?tab=repositories"><img id="github" src="image/git.png"></a>
+    </footer>
 </html>
 

@@ -27,13 +27,8 @@ $bdd = mysqli_connect($servername, $username, $password, $dbname);
          }else{
             echo " Les mots de passe ne sont pas identiques!";
         }
-   
-       
-    }else{
+   }
 
-        echo "Veuillez compléter tous les champs";
-
-    }
 ?>
 
 <!DOCTYPE html>
@@ -46,26 +41,28 @@ $bdd = mysqli_connect($servername, $username, $password, $dbname);
         <title>Inscription</title>
 </head>
 
+<header>
+<div class="inscription"><h2><strong>Inscription</strong></h2></div>
+</header>
+
 <body>
-        <div class="inscription"><h2><strong>Inscription</strong></h2></div>
-        <br>
         <form method="POST">
 
             <label for="Votre nom" class="form-label">Nom:</label>
         
-            <input type="text" placeholder="Nom" name="nom" value="">
+            <input type="text" placeholder="Nom" name="nom" value="" required>
             <br>
             <label for="Votre prenom" class="form-label">Prenom:</label>
 
-            <input type="text" placeholder="Prenom" name="prenom" value="">
+            <input type="text" placeholder="Prenom" name="prenom" value="" required>
             <br>
             <label for="Votre pseudo" class="form-label">Pseudo:</label>
 
-            <input type="text" placeholder="Login" name="login" value="">
+            <input type="text" placeholder="Login" name="login" value="" required>
             <br>
             <label for="Mot de passe" class="form-label">Mot de passe:</label>
 
-            <input type="password" placeholder="mdp" name="mdp" value="">
+            <input type="password" placeholder="mdp" name="mdp" value="" required>
             <br>
             <label for="Confirmer le mot de passe" class="form-label">Confirmer le mot de passe:</label>
 
@@ -74,4 +71,10 @@ $bdd = mysqli_connect($servername, $username, $password, $dbname);
             <button type="submit" name="Envoyer">Envoyer</button>
             </form>
      </body>
+
+<footer>
+            <a href="index.php" class="btn">
+                <div class="arrow"></div>
+                <h6>Retour à l'accueil</h6></a>
+</footer>
 </html>
