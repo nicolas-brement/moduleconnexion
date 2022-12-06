@@ -6,6 +6,18 @@ $result_fetch_all = $request -> fetch_all();
 
 ?>
 
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Site</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style_admin.css">
+</head>
+
+<header>
+    <h2>Informations base de données</h2>
+</header>
+
 <table>
     <tr>
         <th>id</th>
@@ -26,4 +38,12 @@ foreach($result_fetch_all as $ligne){
 }
 ?>
 </table>
+
+<footer>
+    <a href="index.php" class="btn">
+                <div class="arrow"></div>
+                <h6>Retour à l'accueil</h6></a>
+</footer>
+
+</html>
 
